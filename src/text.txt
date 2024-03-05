@@ -1,0 +1,6 @@
+display five countries
+
+go to the box
+*I want to pick 5 items
+pick 1 item first
+repeat the steps till we get 5
