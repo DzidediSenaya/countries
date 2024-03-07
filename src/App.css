@@ -1,0 +1,37 @@
+
+.outer-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding: 10px;
+}
+
+.inner-div{
+    padding-left: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.flag{
+width: 80%;
+height: 50%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #011129;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover
+{
+    background-color: #141a22b5;
+}

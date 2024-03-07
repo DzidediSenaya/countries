@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export default function Countriespage() {
 const [countries, setCountries] = useState([]);
@@ -37,19 +36,14 @@ async function fetchCountries() {
 //}
 
   return (
-    <>
+    <div>
       <Navbar />
-      <h1>Countries</h1>
-      <div className="outer-div">
-        {countries.slice(0, 12).map((item) => (
-          <div className="inner-div">
-          <h2 className="official">{item.name.common}</h2>
-          <h3 className="official">{item.name.official}</h3>
-         <img src={item.flags.png} alt={item.flags.alt} className="flag"/>
-         <Link to={`/Country/${item.name.common}`}> <button>Learn More</button></Link>
-         </div>
+      <h1>Country List</h1>
+      <ul>
+        {countries.slice(0, 5).map((country, index) => (
+          <li key={index}>{country.name.common}</li>
         ))}
+      </ul>
     </div>
-    </>
   );
         }
